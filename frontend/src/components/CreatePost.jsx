@@ -12,7 +12,7 @@ let handleSubmit = async (e) => {
   let data = { name, email, age };
 
   try {
-    let res = await fetch("http://localhost:5000/createUser", {
+    let res = await fetch("https://crud-application-backend-enbv.onrender.com/createUser", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

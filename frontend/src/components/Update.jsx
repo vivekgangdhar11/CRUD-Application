@@ -14,7 +14,7 @@ const Update = () => {
   useEffect(() => {
     async function fetchUser() {
       try {
-        const response = await fetch(`http://localhost:5000/getUser/${id}`);
+        const response = await fetch(`https://crud-application-backend-enbv.onrender.com/getUser/${id}`);
         const result = await response.json();
         if (response.ok) {
           setName(result.user.name || "");
@@ -36,7 +36,7 @@ const Update = () => {
     e.preventDefault();
     const data = { name, email, age: Number(age) };
     try {
-      const res = await fetch(`http://localhost:5000/updateUser/${id}`, {
+      const res = await fetch(`https://crud-application-backend-enbv.onrender.com/${id}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {

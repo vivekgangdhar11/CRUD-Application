@@ -5,7 +5,7 @@ const AllPost = () => {
   let [data, setData] = useState(null);
 
   let handleDelete = async (id) => {
-    let res=await fetch(`http://localhost:5000/deleteUser/${id}`,{
+    let res=await fetch(`https://crud-application-backend-enbv.onrender.com/deleteUser/${id}`,{
       method:"DELETE",
       headers:{
         "content-type":"application/json"
@@ -22,7 +22,7 @@ const AllPost = () => {
   };
 
   async function allData() {
-    let response = await fetch("http://localhost:5000/getAllUser", {
+    let response = await fetch("https://crud-application-backend-enbv.onrender.com/getAllUser", {
       method: "GET",
       headers: {
         "content-type": "application/json",
